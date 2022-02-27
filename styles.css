@@ -1,0 +1,808 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #212529;
+  line-height: 32px;
+  background-color: #fafafa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#topBtn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.scroll {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 48px;
+  height: 48px;
+}
+
+
+/* navbar */
+.menu-container {
+  background-color: #fafafa;
+  padding: 10px 0;
+  display: flex;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 1;
+  box-shadow: 0 0px 0px 0 #E0E0E0, 0 1px 1px 0 #E8E8E8;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 80px;
+  width: 180;
+}
+
+
+.menu {
+  display: flex;
+  width: 100%;
+  margin-left: 30px;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.menu li {
+  display: inline;
+  padding: 10px;
+  align-self: center;
+  margin-right: 20px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #c30021;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.menu ul li a:hover {
+  color: #c30021;
+  text-decoration: underline;
+}
+
+/* end navbar */
+
+/* ciao */
+.header {
+  display: flex;
+  height: 350px;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-big {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 96px;
+  color: #212529;
+  align-self: center;
+  padding: 20px;
+  text-align: center;
+  margin-top: 100px;
+  animation: textanimation 1s ease-in-out;
+ }
+ @keyframes textanimation {
+   0%{
+     letter-spacing: 20px;
+   }
+   100%{
+     letter-spacing: 1px;
+   }
+ }
+
+.title-big span {
+  color: #c30021;
+}
+
+.subtitle {
+  align-self: center;
+  padding: 0;
+  text-align: center;
+  margin-top: 0;
+  font-size: 45px;
+  font-weight: 400;
+  color: #212529;
+  animation: textanimation2 1s ease-in-out;
+}
+@keyframes textanimation2 {
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    letter-spacing: 1px;
+  }
+}
+
+.button {
+  border: 1px solid #c30021;
+  color: #c30021;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease 0s;
+  width: 20%;
+  text-align: center;
+}
+
+.button:after{
+  background: #c30021;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.3s ease 0s;
+}
+
+.button:hover {
+  color: #fff;
+}
+
+.button:hover:after{
+  width: 100%;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* end ciao */
+
+/* sezione portfolio */
+.portfolio-container {
+  display: flex;
+  text-align: left;
+  margin-top: 100px;
+}
+
+
+.p-portfolio {
+  margin: 180px 300px 0 300px;
+}
+
+.copertine1 {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  margin: 40px 300px 40px 300px;
+}
+
+.copertine2 {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  margin: 40px 300px 40px 300px;
+}
+
+.copertine3 {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  margin: 20px 300px 40px 300px;
+}
+
+.card1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card1:hover .naturaverde {
+  transform: scale(1.06);
+  filter: brightness(0.6);
+}
+
+.card2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card2:hover .idoctors {
+  transform: scale(1.06);
+  filter: brightness(0.6);
+}
+
+.card3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card3:hover .phototravel {
+  transform: scale(1.06);
+  filter: brightness(0.6);
+  display: flex;
+}
+
+.naturaverde {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.idoctors {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.phototravel {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+h5 {
+  display: flex;
+  position: absolute;
+  color: #fff;
+  font-size: 37px;
+  z-index: 10;
+  filter: opacity(0);
+  transition: all 0.3s ease-in-out;
+}
+
+h6 {
+  display: flex;
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 100px;
+  z-index: 10;
+  filter: opacity(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.card1:hover h5, .card1:hover h6 {
+  filter: opacity(1);
+  display: flex;
+}
+
+
+.card2:hover h5, .card2:hover h6 {
+  filter: opacity(1);
+  display: flex;
+}
+
+.card3:hover h5, .card3:hover h6 {
+  filter: opacity(1);
+  display: flex;
+}
+
+/* end sezione portfolio */
+
+/* sezione chi sono */
+.chisono-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.title-bigchisono {
+  font-size: 54px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 120px 0 50px 0;
+  padding: 20px 0 20px 20px;
+  text-align: center;
+  animation: textanimation 1s ease-in-out;
+ }
+ @keyframes textanimation {
+   0%{
+     letter-spacing: 20px;
+   }
+   100%{
+     letter-spacing: 1px;
+   }
+ }
+
+.title-bigchisono span {
+ color: #C30021;
+}
+
+.p-container {
+ width: 100%;
+display: flex;
+}
+
+p {
+  justify-content: flex-start;
+  margin: 100px 80px 80px 80px;
+  color: #52585f;
+  font-weight: 400;
+}
+
+
+.fotok {
+  display: block;
+margin: 80px 80px 80px 80px;
+}
+
+/* end sezione chi sono */
+
+
+/* sezione tools */
+.tools-container {
+  height: 400px;
+}
+
+.title-tools {
+  font-size: 54px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 120px 0 50px 60px;
+  padding: 20px 0 20px 20px;
+}
+
+.title-tools span {
+  color: #c30021;
+}
+
+.strumenti {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px;
+  margin-top: 100px;
+}
+/* end sezione tools */
+
+
+/* sezione contattami */
+.contattami-container {
+  display: flex;
+  text-align: left;
+  width: 100%;
+  color: #212529;
+  justify-content: center;
+}
+
+.title-bigcontattami {
+  font-size: 54px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 120px 60px 50px 60px;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  animation: textanimation 1s ease-in-out;
+ }
+ @keyframes textanimation {
+   0%{
+     letter-spacing: 20px;
+   }
+   100%{
+     letter-spacing: 1px;
+   }
+ }
+
+.title-bigcontattami span {
+ color: #C30021;
+}
+
+.subtitle-form {
+  font-size: 37px;
+  font-weight: 400;
+  line-height: 56px;
+  color: #212529;
+}
+
+.contattami-container p {
+  justify-content: flex-start;
+}
+
+.form {
+padding: 40px;
+}
+
+.form .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.form .inputBox input,
+.form .inputBox textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 15px;
+  margin: 10px 0;
+  border: 1px solid #52585f;
+  outline: none;
+  resize: none;
+}
+
+.form .inputBox textarea {
+  height: 150px;
+  background-color: #fafafa;
+}
+
+.form .inputBox span {
+  position: absolute;
+  left: 0;
+  padding-left: 8px;
+  font-size: 15px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #67695e;
+}
+
+.form .inputBox input:focus ~ span,
+.form .inputBox input:valid ~ span,
+.form .inputBox textarea:focus ~ span,
+.form .inputBox textarea:valid ~ span {
+  color: #212529;
+  font-size: 15px;
+  transform: translateY(-26px);
+}
+
+ .form .inputBox input[type="submit"] {
+   width: 100%;
+   background: #c30021;
+   color:  #fafafa;
+   border: none;
+   cursor: pointer;
+   padding: 10px;
+   font-size: 18px;
+ }
+
+.form .inputBox input[type="submit"]:hover {
+  background: #980114;
+  color: #fff;
+}
+
+.form-container {
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+  font-size: 12px;
+}
+
+/* end sezione contattami */
+
+/* footer */
+footer {
+    margin-top: 200px;
+}
+
+footer paragraph {
+  background: #c30021;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  font-size: 15px;
+}
+
+.seguimi {
+  display: flex;
+  justify-content: center;
+  background-color: #c30021;
+  height: 100px;
+}
+
+.icone {
+  display: flex;
+  margin: 50px 10px 10px 10px;
+}
+
+/* media queries*/
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  body {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  #topBtn {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+  }
+
+  .scroll {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .title-big {
+    font-size: 34px;
+    line-height: 40px;
+    padding: 10px;
+    animation: textanimation 1s ease-in-out;
+   }
+   @keyframes textanimation {
+     0%{
+       letter-spacing: 3px;
+     }
+     100%{
+       letter-spacing: 1px;
+     }
+   }
+
+  .subtitle {
+    font-size: 20px;
+    margin: 0px 80px 40px 80px;
+  }
+
+.button {
+  width: 50%;
+}
+
+.button:after {
+    transition: all 0s ease 0s;
+}
+
+  /* navbar e logo */
+.logo {
+  flex-direction: column;
+  margin: 0;
+}
+
+.menu-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  margin-left: 0;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+}
+
+.menu li {
+  display: flex;
+  padding: 5px;
+  align-self: center;
+  margin-right: 0;
+}
+
+.menu ul li a {
+  font-size: 11px;
+}
+
+ /* sezione chi sono */
+
+ .title-bigchisono {
+   font-size: 34px;
+   line-height: 56px;
+ }
+
+.p-container p {
+  justify-content: flex-start;
+  margin: 5px 10px 5px 10px;
+  padding: 5px 10px 5px 10px;
+}
+
+p {
+  font-size: 14px;
+}
+
+.p-container {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fotok {
+margin: 20px 20px 20px 20px;
+width: 200;
+height: 200;
+}
+
+  /* sezione portfolio */
+
+ .portfolio-container {
+   width: 100%;
+ }
+
+ .portfolio-container p {
+   margin-left: 10px;
+   padding-left: 10px;
+ }
+
+ .copertine1 {
+   margin-left: 10px;
+   margin-right: 10px;
+   height: 150px;
+ }
+
+ .copertine2 {
+   margin-left: 10px;
+   margin-right: 10px;
+   height: 150px;
+ }
+
+ .copertine3 {
+   margin-left: 10px;
+   margin-right: 10px;
+   height: 150px;
+ }
+
+ .p-portfolio {
+   margin: 180px 20px 0 20px;
+ }
+
+ h5 {
+   font-size: 24px;
+ }
+
+ h6 {
+   font-size: 16px;
+   margin-top: 60px;
+ }
+
+/* sezione tools */
+
+.title-tools {
+  font-size: 28px;
+  line-height: 40px;
+  margin: 100px 0 0 10px;
+  padding: 20px 0 0 10px;
+}
+
+ .tools-container {
+   height: 400px;
+ }
+
+ .strumenti {
+   flex-direction: column;
+   align-items: center;
+   margin-top: 0;
+ }
+
+.icon {
+  margin: 20px;
+  width: 40px;
+}
+
+/* sezione contattami */
+
+.title-bigcontattami {
+  font-size: 34px;
+  line-height: 56px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.subtitle-form {
+  font-size: 24px;
+  line-height: 36px;
+  margin: 0;
+  padding-left: 0;
+}
+
+.form-container {
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.form {
+padding: 10px;
+margin: 10px;
+}
+
+.contattami-container {
+  justify-content: center;
+}
+
+.contattami-container p {
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+.form .inputBox span {
+  font-size: 12px;
+}
+
+.form .inputBox input:focus ~ span,
+.form .inputBox input:valid ~ span,
+.form .inputBox textarea:focus ~ span,
+.form .inputBox textarea:valid ~ span {
+  font-size: 12px;
+}
+
+.form .inputBox input[type="submit"] {
+  font-size: 15px;
+}
+
+/* sezione footer */
+ footer paragraph {
+   font-size: 11px;
+ }
+
+ .icone {
+   margin: 50px 20px 20px 20px;
+   width: 32px;
+ }
+}
+
+/* tablet Styles */
+@media only screen and (max-width: 767px) {
+/*  sezione chi sono */
+  p {
+    justify-content: flex-start;
+    margin: 40px 80px 80px 40px;
+  }
+/*  sezione portfolio */
+  .copertine {
+    margin-top: 40px;
+  }
+/*  sezione contattami */
+
+.title-bigcontattami {
+  line-height: 54px;
+}
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin-bottom: 60px;
+    justify-content: center;
+  }
+
+  .contattami-container p {
+    justify-content: center;
+    margin: 30px;
+  }
+
+/* sezione chisono */
+.p-container {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fotok {
+margin: 20px 20px 20px 20px;
+width: 200;
+height: 200;
+ }
+}
